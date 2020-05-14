@@ -47,7 +47,9 @@ const CountryModal = ({ closeFunction, data }) => {
 											<Button size="small" plain icon={<Volume />} onClick={() => { new Audio(word.audio).play() }} />
 										}
 									</Box>
-									<Markdown margin={{ bottom: "none" }} >{word.comment}</Markdown>
+									{word.comment &&
+										<Markdown margin={{ bottom: "none" }} >{word.comment}</Markdown>
+									}
 								</Box>
 							))}
 						</Box>
